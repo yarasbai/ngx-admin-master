@@ -1,6 +1,7 @@
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { NgModule, Component } from '@angular/core';
-import { YaraComponent } from './pages/yara/yara.component';
+import { YaraComponent } from './yara/yara.component';
+
 import {
   NbAuthComponent,
   NbLoginComponent,
@@ -15,6 +16,10 @@ export const routes: Routes = [
     path: 'pages',
     loadChildren: () => import('./pages/pages.module')
       .then(m => m.PagesModule),
+  },
+  {
+    path:'yara',
+    component: YaraComponent,
   },
   {
     path: 'auth',
